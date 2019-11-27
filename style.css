@@ -1,0 +1,33 @@
+body{
+	background:url("images (3).jpeg");
+}	
+#d1{
+	width: 50%;
+	height: 550px;
+	background-color:Cyan;
+	position:fixed;
+	bottom: 10%;
+	left: 25%;
+}
+h1,p{
+	text-align: center;
+	color:rgb(255, 0, 107);
+}
+#n1{
+	text-align: center;
+	margin-left:220px;
+}
+.newitem{
+	margin: 10px;
+	padding:10px 15px;
+	background-color:red;
+	font-style:20px;
+	font:14px bold;
+	border-radius:30px;
+	
+}
+#image1{
+	width:400px;
+	height:200px;
+	margin-left:100px;
+}
