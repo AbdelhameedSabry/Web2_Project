@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Learn Engilsh</title>
+	<link rel="stylesheet" type="text/css"href="style.css">
+</head>
+<body>
+	<div id="d1">
+		<h1>LEARN THE ENGLISH LETTERS</h1>
+		<p>SELECT NUMBER OF LETTRES</p> 
+		<input id="n1" type="number">
+		<input id="n2" type="submit" value="Generate">
+			<br><br>
+		<div id="d2"></div>
+		<div id="d2">
+			<img id="image1">
+		</div><br><br>
+		<form id="toshow">
+			<input id="show" type="submit" value="Show Stored Date">
+		</form>
+		<form id="del">
+			<input id="delete" type="submit" value="Delete Stored Date">
+		</form>
+		<div>
+		<p id="mydel"><p>
+		</div>
+		</div>
+		<br><br>
+		<div id="mydatashow">
+
+		</div>
+		<script src="script/jquery3.2.1.min.js"></script>
+		<script src="script/script.js"></script>
+		<script src="script/delete.js"></script>
+		<script>
+			var mydata=document.getElementById("mydatashow");
+			$("#toshow").on("submit",function(e){
+				e.preventDefault()
+				$.ajax({
+					"type":"get",
+					"url":"php/show.php",
+					"data":{"getdata":""},
+					"success":function(r5){
+						mydata.innerHTML="";
+						mydata.innerHTML=r5;
+					}
+				});
+			});
+		</script>
+	
+	</div>
+</body>
+</html>
